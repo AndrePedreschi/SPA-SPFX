@@ -13,8 +13,8 @@ no arquivo tsconfig.json
 import { ReactElement, useEffect } from "react";
 
 import { HashRouter, Route, Switch } from "react-router-dom";
-import { ProtectedRoute } from "./ProtectedRoute";
 
+import { ProtectedRoute } from "./ProtectedRoute";
 import { CommitsConfiguration } from "../screens/CommitsConfiguration";
 import { Home } from "../screens/Home";
 import { LintConfiguration } from "../screens/LintConfiguration";
