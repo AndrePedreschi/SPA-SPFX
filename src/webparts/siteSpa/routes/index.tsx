@@ -64,7 +64,7 @@ export function App({
             component={() => <ProtectedRoute component={ProductOverview} />}
           />
           <Route path="/css" component={UnecessaryCss} />
-         <Route path="*" component={NotFound} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </HashRouter>
     </div>
