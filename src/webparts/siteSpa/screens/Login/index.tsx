@@ -5,10 +5,10 @@ import { NavigationHeader } from "../../components/Header";
 import { LoginForm } from "../../components/LoginForm";
 
 export function Login(): ReactElement {
-	return (
-		<Container>
-			<NavigationHeader />
-			<LoginForm />
-		</Container>
-	);
+  return (
+    <Container>
+      <NavigationHeader />
+      <LoginForm />
+    </Container>
+  );
 }

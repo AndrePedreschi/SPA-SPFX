@@ -5,10 +5,10 @@ import { NavigationHeader } from "../../components/Header";
 import { NewUserForm } from "../../components/NewUserForm";
 
 export function NewUser(): ReactElement {
-	return (
-		<Container>
-			<NavigationHeader />
-			<NewUserForm />
-		</Container>
-	);
+  return (
+    <Container>
+      <NavigationHeader />
+      <NewUserForm />
+    </Container>
+  );
 }

@@ -4,8 +4,8 @@ import { ReactElement } from "react";
 import { Container } from "./styles";
 
 type TCardProps = {
-	children: React.ReactNode;
+  children: React.ReactNode;
 };
 export const Card = ({ children }: TCardProps): ReactElement => {
-	return <Container>{children}</Container>;
+  return <Container>{children}</Container>;
 };

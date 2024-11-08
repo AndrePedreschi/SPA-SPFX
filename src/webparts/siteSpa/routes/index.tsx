@@ -30,37 +30,43 @@ import { ISiteSpaWebPartProps } from "../SiteSpaWebPart";
 import { useZustandStore } from "../store";
 
 export function App({
-	//productsList,
-	userList,
-	context,
+  //productsList,
+  userList,
+  context,
 }: ISiteSpaWebPartProps): ReactElement {
-	const { updateContext, updateUserList, updateSP } = useZustandStore();
+  const { updateContext, updateUserList, updateSP } = useZustandStore();
 
-	useEffect(() => {
-		updateContext(context);
-		updateSP();
-		updateUserList(userList);
-	}, [context, userList, updateContext, updateUserList, updateSP]);
+  useEffect(() => {
+    updateContext(context);
+    updateSP();
+    updateUserList(userList);
+  }, [context, userList, updateContext, updateUserList, updateSP]);
 
-	/* {loading && <Loader />} */
-	return (
-		<div>
-			<HashRouter>
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route path="/start" component={StartNewProject} />
-					<Route path="/lint" component={LintConfiguration} />
-					<Route path="/commits" component={CommitsConfiguration} />
-					<Route path="/newUser" component={NewUser} />
-					<Route path="/login" component={Login} />
-					<Route path="/logoff" component={Logoff} />
-					{/* usamos esse tipo de escrita quando precisamos passar algum dado por props para o componente que vai ser renderizado na rota */}
-					<Route path="/produtos" component={() => <ProtectedRoute component={Products} />} />
-					<Route path="/produto/:id" component={() => <ProtectedRoute component={ProductOverview} />} />
-					<Route path="/css" component={UnecessaryCss} />
-					<Route path="*" component={NotFound} />
-				</Switch>
-			</HashRouter>
-		</div>
-	);
+  /* {loading && <Loader />} */
+  return (
+    <div>
+      <HashRouter>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/start" component={StartNewProject} />
+          <Route path="/lint" component={LintConfiguration} />
+          <Route path="/commits" component={CommitsConfiguration} />
+          <Route path="/newUser" component={NewUser} />
+          <Route path="/login" component={Login} />
+          <Route path="/logoff" component={Logoff} />
+          {/* usamos esse tipo de escrita quando precisamos passar algum dado por props para o componente que vai ser renderizado na rota */}
+          <Route
+            path="/produtos"
+            component={() => <ProtectedRoute component={Products} />}
+          />
+          <Route
+            path="/produto/:id"
+            component={() => <ProtectedRoute component={ProductOverview} />}
+          />
+          <Route path="/css" component={UnecessaryCss} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </HashRouter>
+    </div>
+  );
 }
