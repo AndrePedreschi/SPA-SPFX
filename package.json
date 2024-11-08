@@ -18,7 +18,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write . && git add -A ."
+      "pre-commit": "prettier --write './src/**/*.{js,jsx,ts,tsx}' && git add -A ."
     }
   },
   "dependencies": {
