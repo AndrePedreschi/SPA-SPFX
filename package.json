@@ -12,9 +12,14 @@
     "test": "gulp test",
     "lint": "eslint './src/**/*.{js,jsx,ts,tsx}'",
     "format": "prettier --write './src/**/*.{js,jsx,ts,tsx}'",
-    "prepare": "husky install",
+    "prepare": "husky",
     "commit": "cz",
     "commitlint": "commitlint --edit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && git add -A ."
+    }
   },
   "dependencies": {
     "@fluentui/react": "^8.106.4",

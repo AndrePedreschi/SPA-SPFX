@@ -1,1 +1,2 @@
+# Dentro de .husky/commit-msg
 npx --no-install commitlint --edit "$1"
