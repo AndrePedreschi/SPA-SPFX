@@ -54,7 +54,7 @@ export function UnecessaryCss(): ReactElement {
 
       <div className="backgroundImg3" />
       <AnimationSpinSection>
-        <Img $url={espiral} $img="left" />
+      <Img $url={espiral} $img="left" />
         <Img $url={espiral} $img="right" />
         <Img $url={dog} />
       </AnimationSpinSection>

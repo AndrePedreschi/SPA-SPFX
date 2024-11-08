@@ -8,6 +8,9 @@ export function CommitsConfiguration(): ReactElement {
     <Container>
       <Img url={working} />
       <h1>Volte mais tarde...</h1>
+
+      <p>https://typicode.github.io/husky/get-started.html</p>
+      <p></p>
     </Container>
   );
 }
