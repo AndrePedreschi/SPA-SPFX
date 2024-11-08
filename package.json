@@ -16,11 +16,6 @@
     "commit": "cz",
     "commitlint": "commitlint --edit"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "prettier --write './src/**/*.{js,jsx,ts,tsx}' && git add -A ."
-    }
-  },
   "dependencies": {
     "@fluentui/react": "^8.106.4",
     "@hookform/resolvers": "^3.9.0",
