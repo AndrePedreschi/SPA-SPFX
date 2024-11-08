@@ -47,7 +47,7 @@ export function App({
     <div>
       <HashRouter>
         <Switch>
-        <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Home} />
           <Route path="/start" component={StartNewProject} />
           <Route path="/lint" component={LintConfiguration} />
           <Route path="/commits" component={CommitsConfiguration} />
