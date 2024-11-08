@@ -1,4 +1,4 @@
 # .husky/pre-commit
-npm rum format
+npm run format
 git update-index --again
 
