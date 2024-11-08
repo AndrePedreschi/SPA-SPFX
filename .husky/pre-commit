@@ -1,4 +1,5 @@
 # .husky/pre-commit
 npm run format
+echo 'foi'
 git update-index --again
 
