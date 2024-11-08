@@ -1,0 +1,10 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://1s5y8.sharepoint.com/sites/EstudosSPFx/_layouts/workbench.aspx"
+    }
+  }
+}

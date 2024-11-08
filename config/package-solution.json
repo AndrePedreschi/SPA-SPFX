@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spa-react-client-side-solution",
+    "id": "455615bb-ca41-4186-aea2-e50d37738b28",
+    "version": "1.0.0.3",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "André Rabelo",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spa-react description"
+      },
+      "longDescription": {
+        "default": "spa-react description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spa-react Feature",
+        "description": "The feature that activates elements of the spa-react solution.",
+        "id": "27995d0a-c627-474e-a5c1-4da2a9ea7c65",
+        "version": "1.0.0.3"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spa-react.sppkg"
+  }
+}

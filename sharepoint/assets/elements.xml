@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+    Title="CustomFaviconSolution"
+    Location="ClientSideExtension.ApplicationCustomizer"
+    ClientSideComponentId="73477a44-328c-4f74-a5ef-ab682ed57fe7"
+  >
+  </CustomAction>
+</Elements>
