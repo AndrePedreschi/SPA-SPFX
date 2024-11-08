@@ -7,4 +7,6 @@ if grep -qE "^.{1,88}$"; then
     echo "Aborting commit. Your commit message is too long." >&2
     exit 1
 fi
+
+. "(dirname "$0")/_/husky.sh"
 npm run format
