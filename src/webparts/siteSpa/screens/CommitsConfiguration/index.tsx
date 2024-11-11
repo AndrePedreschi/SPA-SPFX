@@ -128,7 +128,6 @@ export function CommitsConfiguration(): ReactElement {
         <p>{`git commit -m "mensagem inválida"`}</p>
         <Img url={erro} />
       </Section>
-
       <Section>
         <h2>Instalar o Commitizen</h2>
         <p>
