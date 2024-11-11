@@ -119,10 +119,7 @@ export function CommitsConfiguration(): ReactElement {
           código:
         </p>
         <TextFormater
-          text={`module.exports = {
-                                    extends: ['@commitlint/config-conventional'],
-                                  };
-            `}
+          text={`module.exports = { extends: ['@commitlint/config-conventional'], };`}
         />
         <p>
           Exemplo de quando inserimos um commit no formato fora do padrão do
@@ -152,11 +149,9 @@ export function CommitsConfiguration(): ReactElement {
         <TextWithCopy>npm install -g commitizen</TextWithCopy>
         <p>Adicionar nos scripts do package.json:</p>
         <TextFormater
-          text={`
-          {
+          text={`{
             "commit": "cz"
-          }
-          `}
+          }`}
         />
 
         <h2>Instalar o cz-conventional-changelog</h2>

@@ -26,5 +26,5 @@ export const Img = styled.div<{ url: string }>`
   background-position: center;
   background-size: contain;
   width: 480px;
-  height: 480px;
+  height: 114px;
 `;
