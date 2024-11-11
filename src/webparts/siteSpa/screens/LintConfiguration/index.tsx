@@ -1,11 +1,12 @@
 import { ReactElement } from "react";
 
-import * as Prism from "prismjs";
-import "prismjs/components/prism-json";
-import "prismjs/themes/prism-tomorrow.css";
+//import * as Prism from "prismjs";
+//import "prismjs/components/prism-json";
+//import "prismjs/themes/prism-tomorrow.css";
 
 import { lintConfig, vscConfig } from "./config";
-import { Container, Pre, Section } from "./styles";
+import { Container, Section } from "./styles";
+import { TextFormater } from "../../components/TextFormater";
 
 export function LintConfiguration(): ReactElement {
   const lintConfigJson = lintConfig;
@@ -105,17 +106,7 @@ export function LintConfiguration(): ReactElement {
           Seguir o passo a passo das msgs no console, criando um arquivo JSON
         </p>
         <p>Configs para adicionar no arquivo .eslintrc.json</p>
-        <Pre className="language-json">
-          <code
-            dangerouslySetInnerHTML={{
-              __html: Prism.highlight(
-                lintConfigJson,
-                Prism.languages.json,
-                "json",
-              ),
-            }}
-          />
-        </Pre>
+        <TextFormater text={lintConfigJson} />
         <p>
           Após as configurações executar o comando{" "}
           <strong>control + shift + p</strong> e digitar ESLint: Restart ESLit
@@ -127,20 +118,9 @@ export function LintConfiguration(): ReactElement {
         </p>
         <p>
           Atentar-se as propriedades `prettier.xxx` e a propriedade
-          `editor.defaultFormatter` dentro de [typescriptreact] e [typescript]{" "}
+          `editor.defaultFormatter` dentro de [typescriptreact] e [typescript]
         </p>
-
-        <Pre className="language-json">
-          <code
-            dangerouslySetInnerHTML={{
-              __html: Prism.highlight(
-                vscConfigJson,
-                Prism.languages.json,
-                "json",
-              ),
-            }}
-          />
-        </Pre>
+        <TextFormater text={vscConfigJson} />
       </Section>
     </Container>
   );

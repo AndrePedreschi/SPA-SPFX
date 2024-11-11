@@ -1,98 +1,96 @@
 export const lintConfig = `
 {
-   "env": {
-     "browser": true,
-     "es2021": true,
-     "node": true
-   },
-   "extends": [
-     "eslint:recommended",
-     "plugin:react/recommended",
-     "plugin:prettier/recommended",
-     "prettier",
-     "plugin:@typescript-eslint/eslint-recommended",
-     "plugin:@typescript-eslint/recommended"
-   ],
-   "plugins": [
-     "react",
-     "react-hooks",
-     "prettier",
-     "@typescript-eslint",
-     "import"
-   ],
-   "rules": {
-     "@typescript-eslint/no-explicit-any": "off",
-     "react/react-in-jsx-scope": "off",
-     "react-hooks/rules-of-hooks": "error",
-     "react-hooks/exhaustive-deps": "warn",
-     "react/prop-types": "off",
-     
-     "prettier/prettier": [
-       "warn",
-       {
-         "endOfLine": "auto",
-         "tabWidth": 2,
-         "useTabs": true,
-         "semi": true,
-         "singleQuote": false,
-         "trailingComma": "all",
-         "printWidth": 120,
-         "bracketSameLine": false
-       }
-     ],
-     "no-unused-vars": "off",
-     "import/order": [
-       "error",
-       {
-         "newlines-between": "always",
-         "groups": [
-           ["builtin", "external"],
-           "internal",
-           ["parent", "sibling"],
-           "index"
-         ],
-         "alphabetize": { "order": "asc", "caseInsensitive": true },
-         "pathGroups": [
-           {
-             "pattern": "react",
-             "group": "external",
-             "position": "before"
-           },
-           {
-             "pattern": "@/components/**",
-             "group": "internal",
-             "position": "before"
-           }
-         ],
-         "pathGroupsExcludedImportTypes": ["builtin"]
-       }
-     ]
-   },
-   "overrides": [
-     {
-       "files": ["**/*.ts", "**/*.tsx"],
-       "rules": {
-         "@typescript-eslint/no-unused-vars": [
-           "warn",
-           { "argsIgnorePattern": "^_" }
-         ]
-       }
-     }
-   ],
-   "parser": "@typescript-eslint/parser",
-   "parserOptions": {
-     "ecmaFeatures": {
-       "jsx": true
-     },
-     "ecmaVersion": 12,
-     "sourceType": "module"
-   },
-   "settings": {
-     "react": {
-       "version": "detect"
-     }
-   }
- }
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "prettier",
+    "@typescript-eslint",
+    "import"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto",
+        "semi": true,
+        "singleQuote": false,
+        "trailingComma": "all",
+        "printWidth": 80,
+        "bracketSameLine": false
+      }
+    ],
+    "no-unused-vars": "off",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "sibling"],
+          "index"
+        ],
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@/components/**",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          { "argsIgnorePattern": "^_" }
+        ]
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
 `;
 
 export const vscConfig = `
@@ -103,10 +101,8 @@ export const vscConfig = `
 	"workbench.iconTheme": "material-icon-theme",
 	"editor.fontSize": 16,
 	"editor.wordWrap": "wordWrapColumn",
-	"editor.tabSize": 2,
 	"prettier.endOfLine": "auto",
-	"prettier.tabWidth": 2,
-	"prettier.useTabs": true,
+	"prettier.useTabs": false,
 	"prettier.semi": true,
 	"prettier.singleQuote": false,
 	"prettier.trailingComma": "all",
@@ -163,6 +159,7 @@ export const vscConfig = `
 		"editor.formatOnSave": true
 	},
 	"[css]": {
+		//"editor.defaultFormatter": "vscode.css-language-features"
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"vue.codeActions.savingTimeLimit": 3000,
