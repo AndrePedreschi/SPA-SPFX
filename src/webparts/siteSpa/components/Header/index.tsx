@@ -16,6 +16,13 @@ export const NavigationHeader = (): ReactElement => {
       </ImgSection>
 
       <NavigationSection>
+        <Link to={"/start"}>Start</Link>
+        <Link to={"/lint"}>Lint</Link>
+        <Link to={"/commits"}>Commits</Link>
+        <Link to={"/react"}>React</Link>
+      </NavigationSection>
+
+      <NavigationSection>
         {history.location.pathname === "/produtos" && (
           <Link className="btn" to={"/logoff"}>
             Logoff

@@ -1,4 +1,5 @@
 import { createElement, ReactElement } from "react";
+import * as React from "react";
 
 import { Version } from "@microsoft/sp-core-library";
 import "./styles.css";
@@ -63,6 +64,18 @@ export default class SiteSpaWebPart extends BaseClientSideWebPart<ISiteSpaWebPar
 		// Configura a instância do SPFI com o middleware
 		this.sp = spfi().using(SPFx(this.context)).using(loadingMiddleware); */
 
+    const faviconUrl = "https://stackoverflow.com/favicon.ico";
+    const oldFavicon = document.getElementById("favicon");
+    if (oldFavicon) {
+      oldFavicon.style.display = "none";
+      oldFavicon.remove();
+    }
+
+    const newFavicon = document.createElement("link");
+    newFavicon.type = "image/x-icon";
+    newFavicon.rel = "shortcut icon";
+    newFavicon.href = faviconUrl;
+    document.head.appendChild(newFavicon);
     await super.onInit();
   }
 

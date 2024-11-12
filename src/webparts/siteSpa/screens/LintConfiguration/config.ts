@@ -106,7 +106,7 @@ export const vscConfig = `
 	"prettier.semi": true,
 	"prettier.singleQuote": false,
 	"prettier.trailingComma": "all",
-	"prettier.printWidth": 120,
+	"prettier.printWidth": 80,
 	"prettier.bracketSameLine": false,
 	"editor.codeActionsOnSave": {
 		"source.fixAll": "explicit"
