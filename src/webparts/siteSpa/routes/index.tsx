@@ -15,7 +15,9 @@ import { ReactElement, useEffect } from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
 
 import { ProtectedRoute } from "./ProtectedRoute";
+import { NavigationHeader } from "../components/Header";
 import { CommitsConfiguration } from "../screens/CommitsConfiguration";
+import { GitStudies } from "../screens/GitStudies";
 import { Home } from "../screens/Home";
 import { LintConfiguration } from "../screens/LintConfiguration";
 import { Login } from "../screens/Login";
@@ -24,6 +26,7 @@ import { NewUser } from "../screens/NewUser";
 import { NotFound } from "../screens/NotFound";
 import { Products } from "../screens/Products";
 import { ProductOverview } from "../screens/Products/ProductOverview";
+import { ReactStudies } from "../screens/ReactStudies";
 import { StartNewProject } from "../screens/StartNewProject";
 import { UnecessaryCss } from "../screens/UnecessaryCss";
 import { ISiteSpaWebPartProps } from "../SiteSpaWebPart";
@@ -45,11 +48,14 @@ export function App({
   /* {loading && <Loader />} */
   return (
     <HashRouter>
+      <NavigationHeader />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/start" component={StartNewProject} />
         <Route path="/lint" component={LintConfiguration} />
         <Route path="/commits" component={CommitsConfiguration} />
+        <Route path="/react" component={ReactStudies} />
+        <Route path="/git" component={GitStudies} />
         <Route path="/newUser" component={NewUser} />
         <Route path="/login" component={Login} />
         <Route path="/logoff" component={Logoff} />

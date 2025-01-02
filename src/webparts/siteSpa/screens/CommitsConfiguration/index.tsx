@@ -1,5 +1,11 @@
 import { ReactElement } from "react";
 
+import {
+  configCommitizen,
+  scriptCZ,
+  scriptHusky,
+  scriptPritier,
+} from "./config";
 import { Container, Img, Section } from "./styles";
 import erro from "../../assets/erro-commit.png";
 import { TextFormater } from "../../components/TextFormater";
@@ -65,17 +71,12 @@ export function CommitsConfiguration(): ReactElement {
           comandos, um em cada linha:
         </p>
         <TextWithCopy>npm run format</TextWithCopy>
+        <TextWithCopy>git add -A .</TextWithCopy>
         <p>
           Obs.: Caso não tenha configurado o script `format` no package.json,
           crie-o com o seguinte comando em scripts:
         </p>
-        <TextFormater
-          text={`
-            {
-              "format": "prettier --write './src/**/*.{js,jsx,ts,tsx}'",
-            }`}
-        />
-        <TextWithCopy>git add -A .</TextWithCopy>
+        <TextFormater text={scriptPritier} />
         <p>
           Criar um segundo arquivo com o nome `commit-msg` e adicionar o
           seguinte comando:
@@ -86,12 +87,7 @@ export function CommitsConfiguration(): ReactElement {
           realizar o npm intall do projeto e garantir que todos os hooks estejam
           instalados:
         </p>
-        <TextFormater
-          text={`
-          {
-            "prepare": "husky"
-          }`}
-        />
+        <TextFormater text={scriptHusky} />
       </Section>
 
       <Section>
@@ -110,17 +106,29 @@ export function CommitsConfiguration(): ReactElement {
           Devemos colocar os seguintes comandos no terminal do nosso projeto:
         </p>
         <TextWithCopy>
-          {`npm install --save-dev @commitlint/{cli,config-conventional}`}
+          {`npm install -D @commitlint/cli @commitlint/config-conventional`}
         </TextWithCopy>
-        <TextWithCopy>{`echo "export default { extends: ['@commitlint/config-conventional'] };" > commitlintrc.js`}</TextWithCopy>
+
         <p>
-          O objetivo desse último comando é criar um arquivo com no nome
-          .commitlintrc.js na raiz do nosso projeto e adicionar o seguinte
-          código:
+          O objetivo do próximo comando é criar um arquivo com o nome
+          .commitlintrc.js na raiz do nosso projeto, adicionando o código
+          necessário, para isso precisamos rodar um dos seguintes coimandos no
+          terminal:
         </p>
-        <TextFormater
-          text={`module.exports = { extends: ['@commitlint/config-conventional'], };`}
-        />
+        <div>
+          <p>Se estiver usando Windows</p>
+          <TextWithCopy>{`"module.exports = { extends: ['@commitlint/config-conventional'] };" | Out-File -FilePath .commitlintrc.js -Encoding UTF8
+`}</TextWithCopy>
+        </div>
+
+        <div>
+          <p>Se estiver usando Linux</p>
+          <TextWithCopy>{`printf "module.exports = { extends: ['@commitlint/config-conventional'] };\n" > .commitlintrc.js
+`}</TextWithCopy>
+        </div>
+      </Section>
+      <Section>
+        <h2>Realizando um commit fora do padrão</h2>
         <p>
           Exemplo de quando inserimos um commit no formato fora do padrão do
           conventional commits:{" "}
@@ -147,11 +155,7 @@ export function CommitsConfiguration(): ReactElement {
         <p>Inserir o seguinte comando no terminal:</p>
         <TextWithCopy>npm install -g commitizen</TextWithCopy>
         <p>Adicionar nos scripts do package.json:</p>
-        <TextFormater
-          text={`{
-            "commit": "cz"
-          }`}
-        />
+        <TextFormater text={scriptCZ} />
 
         <h2>Instalar o cz-conventional-changelog</h2>
         <p>Essa biblioteca nos ajudará nas msgs de erro dos commits</p>
@@ -160,14 +164,7 @@ export function CommitsConfiguration(): ReactElement {
           Logo após `devDependencies` no pakage.json, adicionar o seguinte
           trecho de código:
         </p>
-        <TextFormater
-          text={`
-            "config": { 
-              "commitizen": {
-                  "path": "./node_modules/cz-conventional-changelog"
-              }
-            }`}
-        />
+        <TextFormater text={configCommitizen} />
         <p>
           Para rodar o commitizen basta rodarmos o script `commit` que
           registramos previamente

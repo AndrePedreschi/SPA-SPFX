@@ -22,30 +22,32 @@ export const NavigationHeader = (): ReactElement => {
         <Link to={"/react"}>React</Link>
       </NavigationSection>
 
-      <NavigationSection>
-        {history.location.pathname === "/produtos" && (
-          <Link className="btn" to={"/logoff"}>
-            Logoff
-          </Link>
-        )}
-        {(history.location.pathname === "/" ||
-          history.location.pathname === "/newUser") && (
-          <Link className="btn" to={"/login"}>
-            Login
-          </Link>
-        )}
-        {history.location.pathname !== "/" && (
-          <Link className="btn" to={"/"}>
-            Home
-          </Link>
-        )}
-        {(history.location.pathname === "/" ||
-          history.location.pathname === "/login") && (
-          <Link className="btn" to={"/newUser"}>
-            Cadastrar-se
-          </Link>
-        )}
-      </NavigationSection>
+      {history ? (
+        <NavigationSection>
+          {history.location.pathname === "/produtos" && (
+            <Link className="btn" to={"/logoff"}>
+              Logoff
+            </Link>
+          )}
+          {(history.location.pathname === "/" ||
+            history.location.pathname === "/newUser") && (
+            <Link className="btn" to={"/login"}>
+              Login
+            </Link>
+          )}
+          {history.location.pathname !== "/" && (
+            <Link className="btn" to={"/"}>
+              Home
+            </Link>
+          )}
+          {(history.location.pathname === "/" ||
+            history.location.pathname === "/login") && (
+            <Link className="btn" to={"/newUser"}>
+              Cadastrar-se
+            </Link>
+          )}
+        </NavigationSection>
+      ) : null}
     </Header>
   );
 };

@@ -43,9 +43,8 @@ export function StartNewProject(): ReactElement {
             Link ferramenta
           </a>
         </h3>
-        <p>
-          Rodar o seguinte comando no terminal: npm install --global gulp-cli
-        </p>
+        <p>Rodar o seguinte comando no terminal:</p>
+        <TextWithCopy>npm install --global gulp-cli</TextWithCopy>
         <h3>
           Yeoman - Ferramenta usada para inicializar um projeto{" "}
           <a href="https://yeoman.io/">Link ferramenta</a>
@@ -58,7 +57,7 @@ export function StartNewProject(): ReactElement {
       <Section>
         <h2>Criar um projeto</h2>
         <p>Rodar os seguintes comandos no terminal:</p>
-        <p>yo</p>
+        <TextWithCopy>yo</TextWithCopy>
         <p>
           escolher a opção: @microsoft/SharePoint e seguir com as opções que vão
           ser apresentadas no terminal
@@ -76,8 +75,14 @@ export function StartNewProject(): ReactElement {
       <Section>
         <h2>Rodar o projeto</h2>
         <p>
-          Para rodar o projeto primeiro precisamos habilitar o certificado de
-          segurança com o seguinte comando:
+          Para rodar o projeto primeiro precisamos ter certeza que todas as
+          bibliotecas estão instaladas, para isso rodamos o seguinte comando no
+          terminal:
+        </p>
+        <TextWithCopy>npm i</TextWithCopy>
+        <p>
+          Após todas as bibliotecas instalasdas devemos habilitar o certificado
+          de segurança com o seguinte comando:
         </p>
         <TextWithCopy>gulp trust-dev-cert</TextWithCopy>
         <p>

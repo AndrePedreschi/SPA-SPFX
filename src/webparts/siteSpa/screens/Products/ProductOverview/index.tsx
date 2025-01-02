@@ -5,7 +5,6 @@ import { useHistory, useParams } from "react-router-dom";
 
 import { Container, Back } from "./styles";
 import { Card } from "../../../components/Card";
-import { NavigationHeader } from "../../../components/Header";
 
 export function ProductOverview(): ReactElement {
   const [personagem, setPersonagem] = useState<any>();
@@ -30,7 +29,6 @@ export function ProductOverview(): ReactElement {
   //exemplo de utilização do children(prop especial) com o component Card
   return (
     <Container>
-      <NavigationHeader />
       <Back onClick={history.goBack}>
         <p>Voltar</p>
       </Back>

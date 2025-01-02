@@ -9,7 +9,6 @@ import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Container, CarouselSection } from "./styles";
-import { NavigationHeader } from "../../components/Header";
 //import { Loader } from "../../components/Loader";
 
 export function Products(): ReactElement {
@@ -46,8 +45,6 @@ export function Products(): ReactElement {
 
   return (
     <Container>
-      <NavigationHeader />
-
       <CarouselSection>
         <Swiper
           spaceBetween={10}

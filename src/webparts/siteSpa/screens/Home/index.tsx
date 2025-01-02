@@ -1,13 +1,10 @@
 import { ReactElement } from "react";
 
 import { Container, H1, Paragrafo, Section, Teste } from "./styles";
-import { NavigationHeader } from "../../components/Header";
 
 export function Home(): ReactElement {
   return (
     <Container>
-      <NavigationHeader />
-
       <Section>
         <H1>
           Bibliotecas testadas no SPFx que funcionam na versão 1.19, com o react
@@ -91,19 +88,17 @@ export function Home(): ReactElement {
               Link biblioteca
             </a>
           </Paragrafo>
+          <Paragrafo>Husk + Conventional Commits</Paragrafo>
+          <Paragrafo>
+            Animações{" "}
+            <a target="_blank" href="https://motion.dev/" rel="noreferrer">
+              Link biblioteca
+            </a>
+          </Paragrafo>
         </ul>
 
         <H1>Ainda em fase de testes e estudos:</H1>
         <ul>
-          <Teste>
-            Husk + Conventional Commits -
-            https://shiharadilshan.medium.com/conventional-commits-pre-commit-hooks-with-husky-no-bad-commits-any-more-8c5a5a9d0fa6
-            https://www.danieldcs.com/eslint-prettier-e-githooks-com-husky-em-react-js/
-            https://dev.to/vitordevsp/padronizacao-de-commit-com-commitlint-husky-e-commitizen-3g1n
-            https://www.tabnews.com.br/maiguelman/como-configurar-commitlint-husky-commits-padronizados-para-sua-equipe
-            `
-          </Teste>
-          <Teste>Animações `</Teste>
           <Teste>
             Customização da página com o aplication customizer / extension
             project

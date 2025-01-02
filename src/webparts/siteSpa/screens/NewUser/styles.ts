@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.form`
+  padding: 2.5rem 1rem;
   width: 100%;
   height: 100%;
   display: flex;

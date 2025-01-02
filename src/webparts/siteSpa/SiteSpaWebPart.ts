@@ -1,5 +1,4 @@
 import { createElement, ReactElement } from "react";
-import * as React from "react";
 
 import { Version } from "@microsoft/sp-core-library";
 import "./styles.css";

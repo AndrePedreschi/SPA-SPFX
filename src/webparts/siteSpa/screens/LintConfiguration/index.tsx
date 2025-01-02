@@ -7,6 +7,7 @@ import { ReactElement } from "react";
 import { lintConfig, vscConfig } from "./config";
 import { Container, Section } from "./styles";
 import { TextFormater } from "../../components/TextFormater";
+import { TextWithCopy } from "../../components/TextWithCopy";
 
 export function LintConfiguration(): ReactElement {
   const lintConfigJson = lintConfig;
@@ -32,71 +33,107 @@ export function LintConfiguration(): ReactElement {
       </Section>
       <Section>
         <h3>Desistalar as seguintes libs nativas do spfx:</h3>
-        <p>@microsoft/eslint-config-spfx</p>
-        <p>@microsoft/eslint-plugin-spfx</p>
+        <div>
+          <p>@microsoft/eslint-config-spfx</p>
+          <TextWithCopy>
+            npm uninstall @microsoft/eslint-config-spfx
+          </TextWithCopy>
+        </div>
+        <div>
+          <p>@microsoft/eslint-plugin-spfx</p>
+          <TextWithCopy>
+            npm uninstall @microsoft/eslint-plugin-spfx
+          </TextWithCopy>
+        </div>
       </Section>
       <Section>
         <h3>Instalar como devDependencies:</h3>
-        <p>
-          @typescript-eslint/eslint-plugin V.5.0.0 -{" "}
-          <a
-            target="_blank"
-            href="https://www.npmjs.com/package/@typescript-eslint/eslint-plugin"
-            rel="noreferrer"
-          >
-            Link biblioteca
-          </a>{" "}
-        </p>
-        <p>
-          @typescript-eslint/parser V.5.0.0 -{" "}
-          <a
-            target="_blank"
-            href="https://www.npmjs.com/package/@typescript-eslint/parser"
-            rel="noreferrer"
-          >
-            Link biblioteca
-          </a>
-        </p>
-        <p>
-          eslint-config-prettier V.9.1.0 -{" "}
-          <a
-            target="_blank"
-            href="https://www.npmjs.com/package/eslint-config-prettier"
-            rel="noreferrer"
-          >
-            Link biblioteca
-          </a>
-        </p>
-        <p>
-          eslint-plugin-import V.2.30.0 -{" "}
-          <a
-            target="_blank"
-            href="https://www.npmjs.com/package/eslint-plugin-import"
-            rel="noreferrer"
-          >
-            Link biblioteca
-          </a>
-        </p>
-        <p>
-          eslint-plugin-prettier V.5.2.1 -{" "}
-          <a
-            target="_blank"
-            href="https://www.npmjs.com/package/eslint-plugin-prettier"
-            rel="noreferrer"
-          >
-            Link biblioteca
-          </a>
-        </p>
-        <p>
-          prettier V.3.3.3 -{" "}
-          <a
-            target="_blank"
-            href="https://www.npmjs.com/package/prettier"
-            rel="noreferrer"
-          >
-            Link biblioteca
-          </a>
-        </p>
+
+        <div>
+          <p>
+            @typescript-eslint/eslint-plugin V.5.0.0 -{" "}
+            <a
+              target="_blank"
+              href="https://www.npmjs.com/package/@typescript-eslint/eslint-plugin"
+              rel="noreferrer"
+            >
+              Link biblioteca
+            </a>{" "}
+          </p>
+          <TextWithCopy>
+            npm i @typescript-eslint/eslint-plugin@5.0.0
+          </TextWithCopy>
+        </div>
+
+        <div>
+          <p>
+            @typescript-eslint/parser V.5.0.0 -{" "}
+            <a
+              target="_blank"
+              href="https://www.npmjs.com/package/@typescript-eslint/parser"
+              rel="noreferrer"
+            >
+              Link biblioteca
+            </a>
+          </p>
+          <TextWithCopy>npm i @typescript-eslint/parser@5.0.0</TextWithCopy>
+        </div>
+
+        <div>
+          <p>
+            eslint-config-prettier -{" "}
+            <a
+              target="_blank"
+              href="https://www.npmjs.com/package/eslint-config-prettier"
+              rel="noreferrer"
+            >
+              Link biblioteca
+            </a>
+          </p>
+          <TextWithCopy>npm i eslint-config-prettier</TextWithCopy>
+        </div>
+
+        <div>
+          <p>
+            eslint-plugin-import -{" "}
+            <a
+              target="_blank"
+              href="https://www.npmjs.com/package/eslint-plugin-import"
+              rel="noreferrer"
+            >
+              Link biblioteca
+            </a>
+          </p>
+          <TextWithCopy>npm i eslint-plugin-import</TextWithCopy>
+        </div>
+
+        <div>
+          <p>
+            eslint-plugin-prettier -{" "}
+            <a
+              target="_blank"
+              href="https://www.npmjs.com/package/eslint-plugin-prettier"
+              rel="noreferrer"
+            >
+              Link biblioteca
+            </a>
+          </p>
+          <TextWithCopy>npm i eslint-plugin-prettier</TextWithCopy>
+        </div>
+
+        <div>
+          <p>
+            prettier -{" "}
+            <a
+              target="_blank"
+              href="https://www.npmjs.com/package/prettier"
+              rel="noreferrer"
+            >
+              Link biblioteca
+            </a>
+          </p>
+          <TextWithCopy>npm i prettier</TextWithCopy>
+        </div>
       </Section>
       <Section>
         <h3>Configurar o Lint:</h3>
