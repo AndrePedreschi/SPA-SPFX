@@ -6,7 +6,7 @@ export function ReactStudies(): ReactElement {
   return (
     <Container>
       <Section>
-        <p>Instalar o NVM</p>
+        <h2>Instalar o NVM</h2>
         <p>https://github.com/coreybutler/nvm-windows?tab=readme-ov-file</p>
         <p>https://medium.com/reactbrasil/usando-nvm-no-windows-d46f018935ef</p>
       </Section>
