@@ -20,6 +20,7 @@ export const NavigationHeader = (): ReactElement => {
         <Link to={"/lint"}>Lint</Link>
         <Link to={"/commits"}>Commits</Link>
         <Link to={"/react"}>React</Link>
+        <Link to={"/git"}>Git</Link>
       </NavigationSection>
 
       {history ? (
